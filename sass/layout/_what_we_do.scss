@@ -1,0 +1,35 @@
+.what-we-do {
+  padding-bottom: 94px;
+}
+
+.our-works-menu {
+  display: flex;
+}
+
+.our-works-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.secondary-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-color-main);
+  margin-bottom: 50px;
+  padding-top: 94px;
+}
+
+.our-works-text {
+  position: relative;
+  bottom: 70px;
+  display: block;
+  text-align: center;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  color: var(--text-secondary-color);
+  width: 370px;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}

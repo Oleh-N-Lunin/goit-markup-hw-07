@@ -1,0 +1,41 @@
+.our-client-list {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 94px;
+}
+
+.our-client-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.our-client-list-item {
+  display: flex;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  border: #afb1b8 1px solid;
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.client-logo-svg {
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.our-client-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+}
+
+.our-client-list-item:hover {
+  border: var(--accent-color) 1px solid;
+}
+
+.our-client-logo:hover .client-logo-svg,
+.our-client-logo:focus .client-logo-svg {
+  fill: var(--accent-color);
+}
