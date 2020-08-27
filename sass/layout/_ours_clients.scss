@@ -32,10 +32,10 @@
 }
 
 .our-client-list-item:hover {
-  border: var(--accent-color) 1px solid;
+  border: $accent-color 1px solid;
 }
 
 .our-client-logo:hover .client-logo-svg,
 .our-client-logo:focus .client-logo-svg {
-  fill: var(--accent-color);
+  fill: $accent-color;
 }

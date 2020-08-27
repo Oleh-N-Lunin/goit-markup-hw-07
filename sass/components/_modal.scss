@@ -30,7 +30,7 @@
   text-align: center;
   letter-spacing: 1.15;
   margin-bottom: 30px;
-  color: var(--title-color-main);
+  color: $title-color-main;
 }
 
 .input-wrapper {
@@ -45,7 +45,7 @@
   left: 4%;
   width: 18px;
   height: 18px;
-  fill: var(--title-color-main);
+  fill: $title-color-main;
 }
 
 .modal-input {
@@ -61,19 +61,19 @@
 .modal-input:focus,
 .modal-input:not(:placeholder-shown) {
   outline: none;
-  border: 1px solid var(--accent-color);
+  border: 1px solid $accent-color;
   border-radius: 4px;
 }
 
 .modal-input:focus + .modal-label,
 .modal-input:not(:placeholder-shown) + .modal-label {
   transform: translate(-80%, -200%);
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .modal-input:focus ~ .modal-icon,
 .modal-input:not(:placeholder-shown) ~ .modal-icon {
-  fill: var(--accent-color);
+  fill: $accent-color;
 }
 
 .modal-label {
@@ -84,7 +84,7 @@
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
-  color: var(--text-main-color);
+  color: $text-main-color;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -104,7 +104,7 @@
 .modal-comment:focus,
 .modal-comment:not(:placeholder-shown) {
   outline: none;
-  border: 1px solid var(--accent-color);
+  border: 1px solid $accent-color;
   border-radius: 4px;
 }
 
@@ -121,7 +121,7 @@
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
-  color: var(--text-main-color);
+  color: $text-main-color;
 }
 
 .modal-checkbox {
@@ -140,20 +140,20 @@
   width: 16px;
   height: 15px;
   margin-right: 7px;
-  border: 1px solid var(--title-color-main);
+  border: 1px solid $title-color-main;
   border-radius: 2px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-checkbox:checked + .checkbox-custom {
-  background-color: var(--accent-color);
+  background-color: $accent-color;
   border: transparent;
   background-image: url("../Images/Modal-Form-Icons/check-2.svg");
   background-origin: border-box;
 }
 
 .agriment-link {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .modal-button {
@@ -166,8 +166,8 @@
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
-  color: var(--text-secondary-color);
-  background-color: var(--accent-color);
+  color: $text-secondary-color;
+  background-color: $accent-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 4px;
