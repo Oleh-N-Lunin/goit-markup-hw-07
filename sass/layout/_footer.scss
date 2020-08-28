@@ -1,7 +1,11 @@
-.footer .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.footer {
+  background-color: #2f303a;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .adress {
@@ -9,6 +13,11 @@
   flex-direction: column;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  .footer-logo {
+    color: $text-secondary-color;
+    margin-bottom: 20px;
+  }
 }
 
 .social-links {
@@ -32,15 +41,6 @@
   margin-right: 10px;
 }
 
-.footer {
-  background-color: #2f303a;
-}
-
-.adress .footer-logo {
-  color: $text-secondary-color;
-  margin-bottom: 20px;
-}
-
 .footer-adress-list-item:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -51,7 +51,7 @@
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color $main-animation;
   color: $text-secondary-color;
 }
 
@@ -63,7 +63,7 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.6);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color $main-animation;
 }
 
 .social-links-text {
@@ -90,12 +90,12 @@
   height: 44px;
   border-radius: 50%;
   background-color: $text-main-color;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  transition: background-color $main-animation;
 
-.social-list-footer-link:hover,
-.social-list-footer-link:focus {
-  background-color: $accent-color;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
 }
 
 .form-footer {
@@ -103,14 +103,14 @@
   align-items: center;
   justify-content: center;
   max-width: 570px;
+
+  .social-links-text {
+    flex-grow: 1;
+  }
 }
 
 .form-item {
   display: flex;
-}
-
-.form-footer .social-links-text {
-  flex-grow: 1;
 }
 
 .form-mail {
@@ -121,22 +121,21 @@
   border-radius: 4px;
   color: $text-secondary-color;
   padding-left: 16px;
-}
 
-.form-mail:focus {
-  outline: none;
-}
+  &:focus {
+    outline: none;
+  }
 
-.form-mail::placeholder {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.form-mail:not(:placeholder-shown) {
-  border-color: $accent-color;
+  &::placeholder {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &:not(:placeholder-shown) {
+    border-color: $accent-color;
+  }
 }
 
 .form-button {
@@ -155,10 +154,10 @@
   background-color: $accent-color;
   border: none;
   border-radius: 4px;
-}
 
-.form-button:focus {
-  outline: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 .form-footer-send {

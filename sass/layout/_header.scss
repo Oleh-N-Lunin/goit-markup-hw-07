@@ -1,17 +1,22 @@
-.header .container {
-  display: flex;
+.header {
+  background-color: $title-color-secondary;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
-.header,
-.header-portfolio .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header,
 .header-portfolio {
   background-color: $title-color-secondary;
+  border-bottom: 1px solid #ececec;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .navigation-main-nav,
@@ -130,7 +135,15 @@
   color: $accent-color;
 }
 
-.adress-mail,
+.adress-mail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  color: $text-main-color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .adress-tel {
   display: flex;
   justify-content: center;
@@ -153,31 +166,42 @@
   color: $accent-color;
 }
 
-.adress-mail-svg,
-.adress-tel-svg {
+.adress-mail-svg {
   display: inline-block;
   margin-right: 10px;
   fill: $text-main-color;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill $main-animation;
   overflow-y: hidden;
   overflow-x: hidden;
-}
-.adress-mail-svg {
   width: 16px;
   height: 14px;
 }
 
 .adress-tel-svg {
+  display: inline-block;
+  margin-right: 10px;
+  fill: $text-main-color;
+  transition: fill $main-animation;
+  overflow-y: hidden;
+  overflow-x: hidden;
   width: 14px;
   height: 15px;
 }
 
-.adress-mail:hover .adress-mail-svg,
-.adress-mail:focus .adress-mail-svg {
-  fill: $accent-color;
+.adress-mail {
+  &:hover,
+  &:focus {
+    .adress-mail-svg {
+      fill: $accent-color;
+    }
+  }
 }
 
-.adress-tel:hover .adress-tel-svg,
-.adress-tel:focus .adress-tel-svg {
-  fill: $accent-color;
+.adress-tel {
+  &:hover,
+  &:focus {
+    .adress-tel-svg {
+      fill: $accent-color;
+    }
+  }
 }

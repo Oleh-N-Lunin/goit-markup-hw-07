@@ -4,10 +4,6 @@
   padding-bottom: 94px;
 }
 
-.our-client-list-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .our-client-list-item {
   display: flex;
   justify-content: center;
@@ -15,12 +11,20 @@
   height: 90px;
   border: #afb1b8 1px solid;
   border-radius: 4px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border $main-animation;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &:hover {
+    border: $accent-color 1px solid;
+  }
 }
 
 .client-logo-svg {
   fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill $main-animation;
 }
 
 .our-client-logo {
@@ -29,13 +33,11 @@
   align-items: center;
   width: 170px;
   height: 90px;
-}
 
-.our-client-list-item:hover {
-  border: $accent-color 1px solid;
-}
-
-.our-client-logo:hover .client-logo-svg,
-.our-client-logo:focus .client-logo-svg {
-  fill: $accent-color;
+  &:hover,
+  &:focus {
+    .client-logo-svg {
+      fill: $accent-color;
+    }
+  }
 }

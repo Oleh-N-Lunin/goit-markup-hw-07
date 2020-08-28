@@ -24,7 +24,16 @@
   margin-right: 30px;
 }
 
-.about-us-title,
+.about-us-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $title-color-main;
+  margin-bottom: 10px;
+}
+
 .our-works-text {
   font-weight: bold;
   font-size: 14px;
@@ -40,8 +49,4 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: $text-main-color;
-}
-
-.about-us-title {
-  margin-bottom: 10px;
 }
