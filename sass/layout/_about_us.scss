@@ -24,23 +24,22 @@
   margin-right: 30px;
 }
 
-.about-us-title {
+%us-works-text {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $title-color-main;
+}
+
+.about-us-title {
+  @extend %us-works-text;
   margin-bottom: 10px;
 }
 
 .our-works-text {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: $title-color-main;
+  @extend %us-works-text
 }
 
 .about-us-text {

@@ -5,7 +5,7 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all $main-animation;
 }
 
 .modal-form {
@@ -56,13 +56,13 @@
   box-shadow: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-}
 
-.modal-input:focus,
-.modal-input:not(:placeholder-shown) {
-  outline: none;
-  border: 1px solid $accent-color;
-  border-radius: 4px;
+  &:focus,
+  &:not(:placeholder-shown) {
+    outline: none;
+    border: 1px solid $accent-color;
+    border-radius: 4px;
+  }
 }
 
 .modal-input:focus + .modal-label,
@@ -99,13 +99,13 @@
   margin-bottom: 20px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-}
 
-.modal-comment:focus,
-.modal-comment:not(:placeholder-shown) {
-  outline: none;
-  border: 1px solid $accent-color;
-  border-radius: 4px;
+  &:focus,
+  &:not(:placeholder-shown) {
+    outline: none;
+    border: 1px solid $accent-color;
+    border-radius: 4px;
+  }
 }
 
 .agriment {
@@ -115,13 +115,21 @@
   margin-bottom: 30px;
 }
 
-.agriment-text,
-.agriment-link {
+%agriment-style {
   font-weight: normal;
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: $text-main-color;
+}
+
+.agriment-text {
+  @extend %agriment-style;
+}
+
+.agriment-link {
+  @extend %agriment-style;
+  color: $accent-color;
 }
 
 .modal-checkbox {
@@ -148,12 +156,8 @@
 .modal-checkbox:checked + .checkbox-custom {
   background-color: $accent-color;
   border: transparent;
-  background-image: url("../Images/Modal-Form-Icons/check-2.svg");
+  background-image: url("/Images/Modal-Form-Icons/check-2.svg");
   background-origin: border-box;
-}
-
-.agriment-link {
-  color: $accent-color;
 }
 
 .modal-button {
@@ -169,15 +173,13 @@
   color: $text-secondary-color;
   background-color: $accent-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all $main-animation;
   border-radius: 4px;
-
   border: none;
-}
 
-.modal-button:hover,
-.hero-section-button:hover {
-  background: #188ce8;
+  &:hover {
+    background: #188ce8;
+  }
 }
 
 .modal-close {
@@ -190,13 +192,13 @@
   border-radius: 50%;
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-image: url("../Images/Modal-Form-Icons/close.svg");
+  background-image: url("/Images/Modal-Form-Icons/close.svg");
   background-repeat: no-repeat;
   background-position: center;
-}
 
-.modal-close:hover {
-  background-image: url("../Images/Modal-Form-Icons/close-blue.svg");
+  &:hover {
+    background-image: url("/Images/Modal-Form-Icons/close-blue.svg");
+  }
 }
 
 .is-hidden {

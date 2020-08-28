@@ -53,10 +53,14 @@
   letter-spacing: 0.03em;
   transition: color $main-animation;
   color: $text-secondary-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
-.adress-mail-footer,
-.adress-tel-footer {
+%font-link-footer {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -64,6 +68,24 @@
   letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.6);
   transition: color $main-animation;
+}
+
+.adress-mail-footer {
+  @extend %font-link-footer;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.adress-tel-footer {
+  @extend %font-link-footer;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
 .social-links-text {
