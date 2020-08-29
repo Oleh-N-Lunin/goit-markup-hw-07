@@ -19,10 +19,16 @@
   }
 }
 
-.navigation-main-nav,
-.navigation {
+%navigation-flex {
   display: flex;
   align-items: center;
+}
+
+.navigation-main-nav {
+  @extend %navigation-flex;
+}
+.navigation {
+  @extend %navigation-flex;
 }
 
 .navigation-menu {

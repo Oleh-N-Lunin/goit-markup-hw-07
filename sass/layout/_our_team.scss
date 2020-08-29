@@ -48,28 +48,27 @@
 
 .social-link-item-svg {
   fill: $text-main-color;
-  transition: fill 250ms $main-animation;
+  transition: fill $main-animation;
   width: 20px;
   height: 20px;
 }
 
-.our-team-title {
+%team-text {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.our-team-title {
+  @extend %team-text;
   color: $title-color-main;
   margin-top: 30px;
 }
 
 .our-team-text {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.18;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: $title-color-main;
+  @extend %team-text;
   font-weight: normal;
   color: $text-main-color;
   margin-top: 10px;
