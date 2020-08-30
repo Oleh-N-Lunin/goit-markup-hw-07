@@ -5,6 +5,8 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
+  -webkit-transition: all $main-animation;
+  -o-transition: all $main-animation;
   transition: all $main-animation;
 }
 
@@ -12,11 +14,20 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 528px;
   background: #ffffff;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -53,6 +64,7 @@
   width: 448px;
   height: 40px;
   padding-left: 42px;
+  -webkit-box-shadow: none;
   box-shadow: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -67,6 +79,8 @@
 
 .modal-input:focus + .modal-label,
 .modal-input:not(:placeholder-shown) + .modal-label {
+  -webkit-transform: translate(-80%, -200%);
+  -ms-transform: translate(-80%, -200%);
   transform: translate(-80%, -200%);
   color: $accent-color;
 }
@@ -85,6 +99,8 @@
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: $text-main-color;
+  -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -109,8 +125,14 @@
 }
 
 .agriment {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-bottom: 30px;
 }
@@ -150,6 +172,8 @@
   margin-right: 7px;
   border: 1px solid $title-color-main;
   border-radius: 2px;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -172,7 +196,10 @@
   letter-spacing: 0.06em;
   color: $text-secondary-color;
   background-color: $accent-color;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all $main-animation;
+  -o-transition: all $main-animation;
   transition: all $main-animation;
   border-radius: 4px;
   border: none;

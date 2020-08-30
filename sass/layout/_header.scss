@@ -2,8 +2,14 @@
   background-color: $title-color-secondary;
 
   .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 }
@@ -13,14 +19,24 @@
   border-bottom: 1px solid #ececec;
 
   .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 }
 
 %navigation-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -32,6 +48,8 @@
 }
 
 .navigation-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -61,12 +79,20 @@
 .navigation-menu-link:hover::after {
   content: "";
   background-color: $accent-color;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
 }
 
 .header-adress-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   &:not(:last-child) {
@@ -75,6 +101,8 @@
 }
 
 .header-adress-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -85,7 +113,11 @@
 }
 
 .nav-adress {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-left: auto;
 }
@@ -117,11 +149,15 @@
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  -webkit-transition: color $main-animation;
+  -o-transition: color $main-animation;
   transition: color $main-animation;
 }
 
 .navigation-menu-link {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -135,8 +171,14 @@
 }
 
 %style-header-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-style: normal;
 }
@@ -173,6 +215,8 @@
   display: inline-block;
   margin-right: 10px;
   fill: $text-main-color;
+  -webkit-transition: fill $main-animation;
+  -o-transition: fill $main-animation;
   transition: fill $main-animation;
   overflow-y: hidden;
   overflow-x: hidden;

@@ -4,11 +4,15 @@
 }
 
 .our-team-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .our-team-item {
   background-color: $title-color-secondary;
+  -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
@@ -19,7 +23,11 @@
 }
 
 .our-team-social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   max-width: 206px;
   margin-left: auto;
@@ -29,12 +37,20 @@
 }
 
 .our-team-social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  -webkit-transition: background-color $main-animation;
+  -o-transition: background-color $main-animation;
   transition: background-color $main-animation;
 
   &:hover,
@@ -48,6 +64,8 @@
 
 .social-link-item-svg {
   fill: $text-main-color;
+  -webkit-transition: fill $main-animation;
+  -o-transition: fill $main-animation;
   transition: fill $main-animation;
   width: 20px;
   height: 20px;

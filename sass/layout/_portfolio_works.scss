@@ -14,7 +14,10 @@
 }
 
 .projects-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -25,7 +28,11 @@
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
   overflow: hidden;
+  -webkit-transition: -webkit-box-shadow $main-animation;
+  transition: -webkit-box-shadow $main-animation;
+  -o-transition: box-shadow $main-animation;
   transition: box-shadow $main-animation;
+  transition: box-shadow $main-animation, -webkit-box-shadow $main-animation;
 
   &:nth-child(3n) {
     margin-right: 0;
@@ -37,9 +44,13 @@
 
   &:hover,
   &:focus {
+    -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
+      0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
       0px 1px 1px rgba(0, 0, 0, 0.12);
     .projects-description {
+      -webkit-transform: translateY(-107%);
+      -ms-transform: translateY(-107%);
       transform: translateY(-107%);
     }
   }
@@ -73,6 +84,8 @@
 .projects-description {
   display: block;
   position: absolute;
+  -webkit-transform: translateY(107%);
+  -ms-transform: translateY(107%);
   transform: translateY(107%);
   font-weight: normal;
   font-size: 18px;
@@ -83,6 +96,11 @@
   padding: 24px 63px;
   background-color: rgba(33, 150, 243, 0.9);
   color: $text-secondary-color;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
 }

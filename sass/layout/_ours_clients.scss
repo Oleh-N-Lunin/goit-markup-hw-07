@@ -1,16 +1,26 @@
 .our-client-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding-bottom: 94px;
 }
 
 .our-client-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 170px;
   height: 90px;
   border: #afb1b8 1px solid;
   border-radius: 4px;
+  -webkit-transition: border $main-animation;
+  -o-transition: border $main-animation;
   transition: border $main-animation;
 
   &:not(:last-child) {
@@ -24,12 +34,20 @@
 
 .client-logo-svg {
   fill: #afb1b8;
+  -webkit-transition: fill $main-animation;
+  -o-transition: fill $main-animation;
   transition: fill $main-animation;
 }
 
 .our-client-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 170px;
   height: 90px;
